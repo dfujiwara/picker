@@ -34,6 +34,20 @@
                ReferencedContainer = "container:Picker.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A428D291AED91F700D4DCBF"
+               BuildableName = "PickerModelTests.xctest"
+               BlueprintName = "PickerModelTests"
+               ReferencedContainer = "container:Picker.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "6A428D0A1AED8A4700D4DCBF"
                BuildableName = "PickerTests.xctest"
                BlueprintName = "PickerTests"
+               ReferencedContainer = "container:Picker.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A428D291AED91F700D4DCBF"
+               BuildableName = "PickerModelTests.xctest"
+               BlueprintName = "PickerModelTests"
                ReferencedContainer = "container:Picker.xcodeproj">
             </BuildableReference>
          </TestableReference>
