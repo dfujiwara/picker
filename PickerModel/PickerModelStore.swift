@@ -13,7 +13,7 @@ public struct PickerModelStore {
 
     public init() {
         var people: [PickerModel] = []
-        for (index, element) in enumerate(["Sophie", "Grant", "Abhijeet", "Wes"]) {
+        for (index, element) in enumerate(["Sophie", "Grant", "Abhijeet", "Wes", "Jin", "Mitali"]) {
             let model = PickerModel(id: index, label: element)
             people.append(model)
         }
