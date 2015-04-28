@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddPickerModelViewController" customModule="Picker" customModuleProvider="target">
+            <connections>
+                <outlet property="elementName" destination="66h-Jw-t60" id="EiK-sh-OP0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au1-N7-gWy">
+                    <rect key="frame" x="10" y="290" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="66h-Jw-t60" userLabel="Element Name">
+                    <rect key="frame" x="62" y="285" width="528" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Au1-N7-gWy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="Ftx-Ql-gtR"/>
+                <constraint firstAttribute="centerY" secondItem="Au1-N7-gWy" secondAttribute="centerY" id="NBn-FZ-ro8"/>
+                <constraint firstAttribute="trailing" secondItem="66h-Jw-t60" secondAttribute="trailing" constant="10" id="bvy-1m-7Xf"/>
+                <constraint firstAttribute="centerY" secondItem="66h-Jw-t60" secondAttribute="centerY" id="fKf-fT-RqS"/>
+                <constraint firstItem="66h-Jw-t60" firstAttribute="leading" secondItem="Au1-N7-gWy" secondAttribute="trailing" constant="10" id="oOd-Ds-icq"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="Au1-N7-gWy"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=regular">
+                <mask key="subviews">
+                    <include reference="Au1-N7-gWy"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>

@@ -28,6 +28,8 @@
 		6A428D381AED91F700D4DCBF /* PickerModel.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6A428D201AED91F700D4DCBF /* PickerModel.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6A428D411AED926700D4DCBF /* PickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A428D401AED926700D4DCBF /* PickerModel.swift */; };
 		6A428D431AED933E00D4DCBF /* PickerModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A428D421AED933E00D4DCBF /* PickerModelStore.swift */; };
+		6A71A68D1AEF4B4300BBA441 /* AddPickerModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71A68B1AEF4B4300BBA441 /* AddPickerModelViewController.swift */; };
+		6A71A68E1AEF4B4300BBA441 /* AddPickerModelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A71A68C1AEF4B4300BBA441 /* AddPickerModelViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +132,8 @@
 		6A428D331AED91F700D4DCBF /* PickerModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerModelTests.swift; sourceTree = "<group>"; };
 		6A428D401AED926700D4DCBF /* PickerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerModel.swift; sourceTree = "<group>"; };
 		6A428D421AED933E00D4DCBF /* PickerModelStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerModelStore.swift; sourceTree = "<group>"; };
+		6A71A68B1AEF4B4300BBA441 /* AddPickerModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPickerModelViewController.swift; sourceTree = "<group>"; };
+		6A71A68C1AEF4B4300BBA441 /* AddPickerModelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPickerModelViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,8 +253,8 @@
 		6A428CF81AED8A4700D4DCBF /* Picker */ = {
 			isa = PBXGroup;
 			children = (
+				6A71A68F1AEF4B5800BBA441 /* Controllers */,
 				6A428CFB1AED8A4700D4DCBF /* AppDelegate.swift */,
-				6A428CFD1AED8A4700D4DCBF /* ViewController.swift */,
 				6A428CFF1AED8A4700D4DCBF /* Main.storyboard */,
 				6A428D021AED8A4700D4DCBF /* Images.xcassets */,
 				6A428D041AED8A4700D4DCBF /* LaunchScreen.xib */,
@@ -318,6 +322,16 @@
 				6A428D321AED91F700D4DCBF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6A71A68F1AEF4B5800BBA441 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6A428CFD1AED8A4700D4DCBF /* ViewController.swift */,
+				6A71A68B1AEF4B4300BBA441 /* AddPickerModelViewController.swift */,
+				6A71A68C1AEF4B4300BBA441 /* AddPickerModelViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,6 +535,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A71A68E1AEF4B4300BBA441 /* AddPickerModelViewController.xib in Resources */,
 				6A428D011AED8A4700D4DCBF /* Main.storyboard in Resources */,
 				6A428D061AED8A4700D4DCBF /* LaunchScreen.xib in Resources */,
 				6A428D031AED8A4700D4DCBF /* Images.xcassets in Resources */,
@@ -566,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A428CFE1AED8A4700D4DCBF /* ViewController.swift in Sources */,
+				6A71A68D1AEF4B4300BBA441 /* AddPickerModelViewController.swift in Sources */,
 				6A428CFC1AED8A4700D4DCBF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -942,6 +958,7 @@
 				6A0DE54D1AEDED3F009C72FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6A0DE54F1AEDED3F009C72FF /* Build configuration list for PBXNativeTarget "Picker WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -950,6 +967,7 @@
 				6A0DE54B1AEDED3F009C72FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6A428CF11AED8A4700D4DCBF /* Build configuration list for PBXProject "Picker" */ = {
 			isa = XCConfigurationList;

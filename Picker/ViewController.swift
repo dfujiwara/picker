@@ -30,9 +30,16 @@ class ViewController: UIViewController {
         self.edgesForExtendedLayout = UIRectEdge.None
         self.extendedLayoutIncludesOpaqueBars = false
         self.navigationItem.title = "Picker"
+        self.configureBarButtons()
+    }
 
-        let rightBarButton = UIBarButtonItem(title: "Pick!", style: UIBarButtonItemStyle.Plain,
+    func configureBarButtons() {
+        let leftBarButton = UIBarButtonItem(title: "Pick!", style: UIBarButtonItemStyle.Plain,
             target: self, action: "pickButtonPressed:")
+        self.navigationItem.leftBarButtonItem = leftBarButton
+
+        let rightBarButton = UIBarButtonItem(title: "Add!", style: UIBarButtonItemStyle.Plain,
+            target: self, action: "addButtonPressed:")
         self.navigationItem.rightBarButtonItem = rightBarButton
     }
 
@@ -67,5 +74,11 @@ extension ViewController {
             tableView?.selectRowAtIndexPath(NSIndexPath(forRow: index, inSection: 0),
                 animated: true, scrollPosition: UITableViewScrollPosition.None)
         }
+    }
+
+    func addButtonPressed(sender: AnyObject) {
+        let viewController = AddPickerModelViewController(nibName:"AddPickerModelViewController", bundle: nil)
+        let navigationController = UINavigationController(rootViewController: viewController)
+        self.presentViewController(navigationController, animated: true, completion: nil)
     }
 }
