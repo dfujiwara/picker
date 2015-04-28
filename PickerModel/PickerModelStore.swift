@@ -8,8 +8,14 @@
 
 import Foundation
 
-public struct PickerModelStore {
-    public let elements: [PickerModel]
+public class PickerModelStore {
+    var _elements: [PickerModel]
+
+    public var elements: [PickerModel] {
+        get {
+            return _elements
+        }
+    }
 
     public init() {
         var people: [PickerModel] = []
@@ -17,7 +23,7 @@ public struct PickerModelStore {
             let model = PickerModel(id: index, label: element)
             people.append(model)
         }
-        self.elements = people
+        _elements = people
     }
 
     public func randomSelect() -> (Int?, PickerModel?) {
@@ -26,6 +32,17 @@ public struct PickerModelStore {
         }
         let randomIndex = Int(arc4random_uniform(UInt32(elements.count)))
         return (randomIndex, elements[randomIndex])
+    }
+
+    public func addNewElement(elementName: String) {
+        let idArray = elements.map {
+            (element) -> Int in
+            return element.id
+        }
+        let maxId = idArray.reduce(0, combine: { (currentMax: Int, nextId: Int) -> Int in
+            return max(currentMax, nextId)})
+        let newModel = PickerModel(id: maxId + 1, label: elementName)
+        _elements.append(newModel)
     }
 }
 

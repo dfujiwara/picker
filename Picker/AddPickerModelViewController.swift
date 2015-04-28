@@ -13,6 +13,17 @@ class AddPickerModelViewController: UIViewController {
 
     @IBOutlet weak var elementName: UITextField!
 
+    var pickerModelStore: PickerModelStore
+
+    init(pickerModelStore: PickerModelStore) {
+        self.pickerModelStore = pickerModelStore
+        super.init(nibName: "AddPickerModelViewController", bundle: nil)
+    }
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "Add"
@@ -33,7 +44,7 @@ class AddPickerModelViewController: UIViewController {
         if elementName.text.isEmpty {
            return
         }
-
+        self.pickerModelStore.addNewElement(elementName.text)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 

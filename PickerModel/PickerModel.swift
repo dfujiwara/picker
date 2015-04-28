@@ -8,7 +8,15 @@
 
 import Foundation
 
-public struct PickerModel {
+public struct PickerModel: Comparable {
     public let id: Int
     public let label: String
+}
+
+public func <(lhs: PickerModel, rhs: PickerModel) -> Bool {
+    return lhs.id < rhs.id
+}
+
+public func ==(lhs: PickerModel, rhs: PickerModel) -> Bool {
+    return lhs.id == rhs.id
 }

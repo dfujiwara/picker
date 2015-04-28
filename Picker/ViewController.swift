@@ -49,6 +49,10 @@ class ViewController: UIViewController {
         tableView!.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: reuseIdentifier)
         self.view = tableView!
     }
+
+    override func viewWillAppear(animated: Bool) {
+        tableView?.reloadData()
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -77,7 +81,8 @@ extension ViewController {
     }
 
     func addButtonPressed(sender: AnyObject) {
-        let viewController = AddPickerModelViewController(nibName:"AddPickerModelViewController", bundle: nil)
+        //let viewController = AddPickerModelViewController(nibName:"AddPickerModelViewController", bundle: nil)
+        let viewController = AddPickerModelViewController(pickerModelStore: self.pickerModelStore)
         let navigationController = UINavigationController(rootViewController: viewController)
         self.presentViewController(navigationController, animated: true, completion: nil)
     }
