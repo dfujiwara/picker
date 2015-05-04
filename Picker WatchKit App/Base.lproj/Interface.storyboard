@@ -10,13 +10,30 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Picker_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <label alignment="center" text="Picker!" textAlignment="center" id="ACe-f1-fDd"/>
-                        <button width="1" alignment="left" title="Button" id="oC2-Vg-03d">
+                        <label alignment="left" text="Picker!" textAlignment="left" id="ACe-f1-fDd"/>
+                        <table alignment="left" id="lrn-xb-ns6">
+                            <items>
+                                <tableRow identifier="PickerRowType" id="aQq-9I-d4U" customClass="PickerRowController" customModule="Picker_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="XPm-JE-ESf">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Picker Element" textAlignment="center" numberOfLines="0" id="tio-xW-f7d"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="tio-xW-f7d" id="VXa-Sj-TFe"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <button width="1" alignment="left" title="Random Select" id="oC2-Vg-03d">
                             <connections>
                                 <segue destination="H09-Lb-Dhx" kind="modal" identifier="PickerSelection" id="Cvr-bn-gTx"/>
                             </connections>
                         </button>
                     </items>
+                    <connections>
+                        <outlet property="tableView" destination="lrn-xb-ns6" id="Xto-Jx-vqu"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
