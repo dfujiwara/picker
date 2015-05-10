@@ -5,6 +5,29 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
+        <!--Glance Interface Controller-->
+        <scene sceneID="QHH-Ec-vcp">
+            <objects>
+                <glanceController topTemplateType="largeBody1" id="T54-gm-FPE" customClass="GlanceController" customModule="Picker_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="PICK!" id="xFT-h2-Nar"/>
+                        <label alignment="left" id="y3B-1i-6fE"/>
+                        <group alignment="left" id="2oO-bB-bVO">
+                            <items>
+                                <label alignment="center" text="Daisuke" textAlignment="center" id="Pod-Gl-rPc">
+                                    <fontDescription key="font" type="system" pointSize="17"/>
+                                </label>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="glanceTitle" destination="xFT-h2-Nar" id="KPO-Xw-KEU"/>
+                        <outlet property="pickedElementLabel" destination="Pod-Gl-rPc" id="hNW-yS-SNW"/>
+                    </connections>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="220" y="51"/>
+        </scene>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>

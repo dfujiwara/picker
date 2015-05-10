@@ -31,6 +31,7 @@
 		6A71A68D1AEF4B4300BBA441 /* AddPickerModelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A71A68B1AEF4B4300BBA441 /* AddPickerModelViewController.swift */; };
 		6A71A68E1AEF4B4300BBA441 /* AddPickerModelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A71A68C1AEF4B4300BBA441 /* AddPickerModelViewController.xib */; };
 		6AB32F101AF7043F001C38E0 /* PickerRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AB32F0F1AF7043F001C38E0 /* PickerRowController.swift */; };
+		6AC8F3301AFF1F45004E7F69 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC8F32F1AFF1F45004E7F69 /* GlanceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +137,9 @@
 		6A71A68B1AEF4B4300BBA441 /* AddPickerModelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPickerModelViewController.swift; sourceTree = "<group>"; };
 		6A71A68C1AEF4B4300BBA441 /* AddPickerModelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPickerModelViewController.xib; sourceTree = "<group>"; };
 		6AB32F0F1AF7043F001C38E0 /* PickerRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerRowController.swift; sourceTree = "<group>"; };
+		6AB32F111AF73D36001C38E0 /* Picker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Picker.entitlements; sourceTree = "<group>"; };
+		6AB32F121AF73DAC001C38E0 /* Picker WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Picker WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		6AC8F32F1AFF1F45004E7F69 /* GlanceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +186,7 @@
 		6A0DE52E1AEDED3F009C72FF /* Picker WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				6AB32F121AF73DAC001C38E0 /* Picker WatchKit Extension.entitlements */,
 				6A0DE5501AEDF06A009C72FF /* Controllers */,
 				6A0DE5361AEDED3F009C72FF /* Images.xcassets */,
 				6A0DE52F1AEDED3F009C72FF /* Supporting Files */,
@@ -223,6 +228,7 @@
 				6A0DE5341AEDED3F009C72FF /* NotificationController.swift */,
 				6A0DE5511AEDF092009C72FF /* PickedInterfaceController.swift */,
 				6AB32F0F1AF7043F001C38E0 /* PickerRowController.swift */,
+				6AC8F32F1AFF1F45004E7F69 /* GlanceController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 		6A428CF81AED8A4700D4DCBF /* Picker */ = {
 			isa = PBXGroup;
 			children = (
+				6AB32F111AF73D36001C38E0 /* Picker.entitlements */,
 				6A71A68F1AEF4B5800BBA441 /* Controllers */,
 				6A428CFB1AED8A4700D4DCBF /* AppDelegate.swift */,
 				6A428CFF1AED8A4700D4DCBF /* Main.storyboard */,
@@ -471,6 +478,12 @@
 				TargetAttributes = {
 					6A0DE52C1AEDED3F009C72FF = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = Z72VG6DPMS;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					6A0DE5391AEDED3F009C72FF = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -478,6 +491,12 @@
 					};
 					6A428CF51AED8A4700D4DCBF = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = Z72VG6DPMS;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					6A428D0A1AED8A4700D4DCBF = {
 						CreatedOnToolsVersion = 6.3.1;
@@ -573,6 +592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AC8F3301AFF1F45004E7F69 /* GlanceController.swift in Sources */,
 				6A0DE5521AEDF092009C72FF /* PickedInterfaceController.swift in Sources */,
 				6A0DE5351AEDED3F009C72FF /* NotificationController.swift in Sources */,
 				6AB32F101AF7043F001C38E0 /* PickerRowController.swift in Sources */,
@@ -681,6 +701,9 @@
 		6A0DE54A1AEDED3F009C72FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Picker WatchKit Extension/Picker WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -688,6 +711,7 @@
 				INFOPLIST_FILE = "Picker WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -695,9 +719,13 @@
 		6A0DE54B1AEDED3F009C72FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Picker WatchKit Extension/Picker WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Picker WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -825,9 +853,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Picker/Picker.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Picker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -835,9 +867,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Picker/Picker.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Picker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
