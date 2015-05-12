@@ -56,6 +56,13 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDataSource {
+
+    func getElement(indexPath: NSIndexPath) -> PickerModel {
+        let elements = pickerModelStore.elements
+        let element = elements[indexPath.row]
+        return element
+    }
+
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pickerModelStore.elements.count;
     }
@@ -63,10 +70,19 @@ extension ViewController: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier,
             forIndexPath: indexPath) as! UITableViewCell
-        let elements = pickerModelStore.elements
-        let element = elements[indexPath.row]
+        let element = self.getElement(indexPath)
         cell.textLabel!.text = element.label
         return cell
+    }
+
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle,
+        forRowAtIndexPath indexPath: NSIndexPath) {
+            if editingStyle != .Delete {
+                return
+            }
+            let element = self.getElement(indexPath)
+            pickerModelStore.removeElement(element)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
     }
 }
 
