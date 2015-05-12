@@ -44,5 +44,12 @@ public class PickerModelStore {
         let newModel = PickerModel(id: maxId + 1, label: elementName)
         _elements.append(newModel)
     }
+
+    public func removeElement(element: PickerModel) {
+        let elementIndex = find(_elements, element)
+        if let index = elementIndex {
+            _elements.removeAtIndex(index);
+        }
+    }
 }
 
